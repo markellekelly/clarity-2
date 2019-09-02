@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    /* Remove token from URL. */
+    (function () {
+      var parsedUrl = new URL(window.location.href);
+      if (parsedUrl.searchParams.get('token')) {
+        parsedUrl.searchParams.delete('token');
+        window.history.replaceState({ }, '', parsedUrl.href);
+      }
+    })();
+  </script>
+  <style>
+  body {
+    background-color: #F37626;
+    color:white;
+    font-size:5vh;
+  }
+  </style>
+  </script>
+</head>
+<body id="clarity-container">
+  <h1>new dealio</h1>
+</body>
